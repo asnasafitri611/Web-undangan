@@ -1,0 +1,145 @@
+:root {
+    --pink: #f062eef3;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: "Work Sans", sans-serif;
+    min-height: 2000px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img spiderman.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+    filter: brightness();
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1, .hero h4, .hero p, .hero span{
+    text-shadow:  var(--shadow);
+}
+
+.hero main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 6rem;
+}
+
+.hero h4 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 2rem;
+}
+
+.hero a{
+    margin-top: 4;
+    background-color: var(--pink);
+    color: rgb(22, 22, 22);
+}
+
+.hero a:hover {
+    color: var(--pink);
+    background-color: rgb(22, 22, 22);
+}
+
+#hero a.btn {
+    margin-top: 20px;
+}
+
+
+#countdown {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.time-box {
+  background: rgba(0, 0, 0, 0.185);
+  padding: 15px 25px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  font-size: 0.8em;
+  color: #fbf9f9;
+  margin-top: 5px;
+}
+
+/* MEDIA QUERY*/
+/*LAPTOP*/
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+  #countdown {
+    font-size: 1.2em;
+  }
+  .time-box {
+    max-width: 130px;
+    padding: 12px 15px;
+  }
+}
+
+/*TABLET*/
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  #countdown {
+    font-size: 1em;
+  }
+  .time-box {
+    max-width: 120px;
+    padding: 10px 10px;
+  }
+}
+
+/*MOBILE PHONE*/
+@media (max-width: 567px) {
+  html {
+    font-size: 60%;
+  }
+  #countdown {
+    font-size: 0.9em;
+    gap: 10px;
+  }
+  .time-box {
+    flex: 1 1 45%; /* dua kotak per baris */
+    max-width: none;
+    padding: 8px 8px;
+  }
+}
